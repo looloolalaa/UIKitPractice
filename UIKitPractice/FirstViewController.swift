@@ -17,25 +17,18 @@ class FirstViewController: UIViewController {
         
     }
     
-    @IBAction func nextButtonAction() {
-        let vc = SecondViewController()
-        present(vc, animated: true)
-    }
-    
 //     MARK: 1. segue(storyboard) + prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = (segue.destination as? SecondViewController) {
             vc.str = textField.text
         }
     }
-//
+
 //     MARK: 2. property
 //    @IBAction func nextButtonAction() {
 //        guard let vc = self.storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
 //
-////        error code
-////        vc.secondLabel.text = textField.text
-//
+////      (error code) vc.secondLabel.text = textField.text
 //        vc.str = textField.text
 //        present(vc, animated: true)
 //    }
