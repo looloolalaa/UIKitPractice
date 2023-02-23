@@ -22,19 +22,19 @@ class SecondViewController: UIViewController {
     
     
 //    MARK: 4. delegate Protocol
-//    var delegate: MyDelegate?
-//    @IBAction func append() {
-//        delegate?.hello()
-//    }
+    var delegate: MyDelegate?
+    @IBAction func append() {
+        delegate?.hello()
+    }
 //
 //
 //    MARK: 3. execute A func
-    var callerVC: FirstViewController!
-    @IBAction func append() {
-        str? += "z"
-        label.text = str
-        callerVC?.setTextField(str!)
-    }
+//    var callerVC: FirstViewController!
+//    @IBAction func append() {
+//        str? += "z"
+//        label.text = str
+//        callerVC?.setTextField(str!)
+//    }
 //
 //        MARK: 5. closure
 //        var closure: (() -> String?)?

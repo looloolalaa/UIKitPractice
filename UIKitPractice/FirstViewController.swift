@@ -7,8 +7,16 @@
 
 import UIKit
 
+protocol MyDelegate {
+    func hello()
+}
 
-class FirstViewController: UIViewController {
+
+class FirstViewController: UIViewController, MyDelegate {
+    func hello() {
+        print("hello")
+    }
+    
     
     @IBOutlet weak var textField: UITextField!
     
@@ -34,26 +42,24 @@ class FirstViewController: UIViewController {
 //    }
 //
 //     MARK: 3. (B -> A) pass vc
-    @IBAction func nextButtonAction() {
-        guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-        vc.callerVC = self
-        present(vc, animated: true)
-    }
-    func setTextField(_ s: String) {
-        textField.text = s + "1"
-    }
+//    @IBAction func nextButtonAction() {
+//        guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
+//        vc.callerVC = self
+//        present(vc, animated: true)
+//    }
+//    func setTextField(_ s: String) {
+//        textField.text = s + "1"
+//    }
 //
 //        MARK: 4. delegate Protocol
 //
-//        protocol MyDelegate {
-//            func hello()
-//        }
-//        @IBAction func nextButtonAction() {
-//            guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
+        
+        @IBAction func nextButtonAction() {
+            guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
 
-//            vc.delegate = self
-//            present(vc, animated: true)
-//        }
+            vc.delegate = self
+            present(vc, animated: true)
+        }
 //
 //        MARK: 5.closure
 //        func hello() -> String? {
