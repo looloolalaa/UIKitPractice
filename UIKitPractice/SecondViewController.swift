@@ -22,10 +22,10 @@ class SecondViewController: UIViewController {
     
     
 //    MARK: 4. delegate Protocol
-    var delegate: MyDelegate?
-    @IBAction func append() {
-        delegate?.hello()
-    }
+//    var delegate: MyDelegate?
+//    @IBAction func append() {
+//        delegate?.hello()
+//    }
 //
 //
 //    MARK: 3. execute A func
@@ -37,10 +37,10 @@ class SecondViewController: UIViewController {
 //    }
 //
 //        MARK: 5. closure
-//        var closure: (() -> String?)?
-//        @IBAction func append() {
-//            secondLabel.text = closure()
-//        }
+        var closure: (() -> String?)?
+        @IBAction func append() {
+            label.text = closure!()
+        }
 //
 //        MARK: 6. NotificationCenter
 //        @IBAction func append() {
