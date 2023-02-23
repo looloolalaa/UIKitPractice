@@ -29,12 +29,12 @@ class SecondViewController: UIViewController {
 //
 //
 //    MARK: 3. execute A func
-//    var callerVC: FirstViewController!
-//    @IBAction func append() {
-//        str? += "z"
-//        label.text = str
-//        callerVC?.setTextField(secondString!)
-//    }
+    var callerVC: FirstViewController!
+    @IBAction func append() {
+        str? += "z"
+        label.text = str
+        callerVC?.setTextField(str!)
+    }
 //
 //        MARK: 5. closure
 //        var closure: (() -> String?)?
