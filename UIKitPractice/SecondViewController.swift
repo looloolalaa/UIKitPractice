@@ -7,21 +7,44 @@
 
 import UIKit
 
+
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var secondLabel: UILabel!
-    var secondString: String?
+    @IBOutlet weak var label: UILabel!
+    var str: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        secondLabel.text = secondString
+        label.text = str
     }
     
+    
+    
+//    MARK: 4. delegate Protocol
+//    var delegate: MyDelegate?
 //    @IBAction func append() {
-//        secondString? += "z"
-//        secondLabel.text = secondString
+//        delegate?.hello()
+//    }
+//
+//
+//    MARK: 3. execute A func
+//    var callerVC: FirstViewController!
+//    @IBAction func append() {
+//        str? += "z"
+//        label.text = str
 //        callerVC?.setTextField(secondString!)
 //    }
+//
+//        MARK: 5. closure
+//        var closure: (() -> String?)?
+//        @IBAction func append() {
+//            secondLabel.text = closure()
+//        }
+//
+//        MARK: 6. NotificationCenter
+//        @IBAction func append() {
+//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "14hz"), object: "~packet~")
+//        }
 
 }

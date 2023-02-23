@@ -26,7 +26,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
-                                    <action selector="nextButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBX-7h-wd0"/>
+                                    <action selector="nextButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgX-nJ-K5K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,7 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oaj-U3-RoU"/>
                     <connections>
-                        <outlet property="firstTextField" destination="VXw-La-MTH" id="KQD-9J-QCb"/>
+                        <outlet property="textField" destination="VXw-La-MTH" id="KQD-9J-QCb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,7 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nD5-Pg-dte"/>
                     <connections>
-                        <outlet property="secondLabel" destination="Cwt-vw-RNz" id="BCI-uC-7Kb"/>
+                        <outlet property="label" destination="Cwt-vw-RNz" id="BCI-uC-7Kb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIc-DI-yK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
