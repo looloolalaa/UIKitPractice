@@ -16,7 +16,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        label.text = str
+//        label.text = str
     }
     
     
@@ -37,14 +37,14 @@ class SecondViewController: UIViewController {
 //    }
 //
 //        MARK: 5. closure
-        var closure: (() -> String?)?
-        @IBAction func append() {
-            label.text = closure!()
-        }
+//        var closure: (() -> String?)?
+//        @IBAction func append() {
+//            label.text = closure!()
+//        }
 //
 //        MARK: 6. NotificationCenter
-//        @IBAction func append() {
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "14hz"), object: "~packet~")
-//        }
+        @IBAction func append() {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "14hz"), object: "~packet~")
+        }
 
 }

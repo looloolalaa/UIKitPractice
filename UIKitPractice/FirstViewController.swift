@@ -15,6 +15,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(trigger), name: NSNotification.Name(rawValue: "14hz"), object: nil)
     }
     
 //     MARK: 1. segue(storyboard) + prepare
@@ -54,25 +55,25 @@ class FirstViewController: UIViewController {
 //        }
 //
 //        MARK: 5.closure
-        func hello() -> String? {
-            textField.text? += "1"
-            return textField.text
-        }
-
-        @IBAction func nextButtonAction() {
-            guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-            vc.closure = hello
-            present(vc, animated: true)
-        }
+//        func hello() -> String? {
+//            textField.text? += "1"
+//            return textField.text
+//        }
+//
+//        @IBAction func nextButtonAction() {
+//            guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
+//            vc.closure = hello
+//            present(vc, animated: true)
+//        }
 //
 //
 //
 //        MARK: 6. NotificationCenter
-//        NotificationCenter.default.addObserver(self, selector: #selector(trigger), name: NSNotification.Name(rawValue: "14hz"), object: nil)
-//        @objc func trigger(_ notification: NSNotification) {
-//            if let s = notification.object as? String {
-//                textField.text = s
-//            }
-//        }
+        
+        @objc func trigger(_ notification: NSNotification) {
+            if let s = notification.object as? String {
+                textField.text = s
+            }
+        }
 }
 
