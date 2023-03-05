@@ -6,74 +6,27 @@
 //
 
 import UIKit
-
-
 class FirstViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    var temp: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(trigger), name: NSNotification.Name(rawValue: "14hz"), object: nil)
     }
     
-//     MARK: 1. segue(storyboard) + prepare
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = (segue.destination as? SecondViewController) {
-//            vc.str = textField.text
-//        }
-//    }
-
-//     MARK: 2. property
-//    @IBAction func nextButtonAction() {
-//        guard let vc = self.storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-//
-////      (error code) vc.secondLabel.text = textField.text
-//        vc.str = textField.text
-//        present(vc, animated: true)
-//    }
-//
-//     MARK: 3. (B -> A) pass vc
-//    @IBAction func nextButtonAction() {
-//        guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-//        vc.callerVC = self
-//        present(vc, animated: true)
-//    }
-//    func setTextField(_ s: String) {
-//        textField.text = s + "1"
-//    }
-//
-//        MARK: 4. delegate Protocol
-//
-//
-//        @IBAction func nextButtonAction() {
-//            guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-//
-//            vc.delegate = self
-//            present(vc, animated: true)
-//        }
-//
-//        MARK: 5.closure
-//        func hello() -> String? {
-//            textField.text? += "1"
-//            return textField.text
-//        }
-//
-//        @IBAction func nextButtonAction() {
-//            guard let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-//            vc.closure = hello
-//            present(vc, animated: true)
-//        }
-//
-//
-//
-//        MARK: 6. NotificationCenter
-        
-        @objc func trigger(_ notification: NSNotification) {
-            if let s = notification.object as? String {
-                textField.text = s
+    @IBAction func buttonAction() {
+        guard let url = URL(string: "https://www.naver.com") else { return }
+        let urlTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let data = data {
+                DispatchQueue.main.async {
+                    self.textView.text = String(data: data, encoding: .utf8)
+                }
             }
+            
         }
+        
+        urlTask.resume()
+    }
 }
-
