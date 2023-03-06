@@ -16,17 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="empty" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tuj-Ht-EdC">
-                                <rect key="frame" x="77" y="209" width="239" height="189"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0n-xf-HST">
                                 <rect key="frame" x="159" y="498" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get"/>
+                                <buttonConfiguration key="configuration" style="plain" title="noti"/>
                                 <connections>
                                     <action selector="buttonAction" destination="Qk8-iN-wQu" eventType="touchUpInside" id="eED-xa-cNM"/>
                                 </connections>
@@ -35,19 +28,11 @@
                         <viewLayoutGuide key="safeArea" id="7fc-Im-4jS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tuj-Ht-EdC" firstAttribute="top" secondItem="7fc-Im-4jS" secondAttribute="top" constant="150" id="HnG-p5-l3i"/>
-                            <constraint firstItem="Tuj-Ht-EdC" firstAttribute="centerX" secondItem="n7H-R8-jgE" secondAttribute="centerX" id="PMT-G2-ZOP"/>
                             <constraint firstItem="y0n-xf-HST" firstAttribute="leading" secondItem="7fc-Im-4jS" secondAttribute="leading" constant="159" id="U5h-88-34G"/>
                             <constraint firstItem="7fc-Im-4jS" firstAttribute="bottom" secondItem="y0n-xf-HST" secondAttribute="bottom" constant="285" id="WSV-OO-3dI"/>
                             <constraint firstItem="7fc-Im-4jS" firstAttribute="trailing" secondItem="y0n-xf-HST" secondAttribute="trailing" constant="159" id="rFy-Cu-D4z"/>
-                            <constraint firstItem="y0n-xf-HST" firstAttribute="top" secondItem="Tuj-Ht-EdC" secondAttribute="bottom" constant="100" id="zSC-WD-X0x"/>
-                            <constraint firstItem="Tuj-Ht-EdC" firstAttribute="leading" secondItem="7fc-Im-4jS" secondAttribute="leading" constant="77" id="zZ3-lV-Hxp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Cwt-ys-BMW"/>
-                    <connections>
-                        <outlet property="textView" destination="Tuj-Ht-EdC" id="oyx-u8-eXc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFs-14-8bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,9 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

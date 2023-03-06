@@ -6,27 +6,30 @@
 //
 
 import UIKit
+import UserNotifications
+
 class FirstViewController: UIViewController {
-    
-    @IBOutlet weak var textView: UITextView!
-    var temp: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) {
+            (didAllow, Error) in
+            
+            print(didAllow)
+        }
     }
     
     @IBAction func buttonAction() {
-        guard let url = URL(string: "https://www.naver.com") else { return }
-        let urlTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            if let data = data {
-                DispatchQueue.main.async {
-                    self.textView.text = String(data: data, encoding: .utf8)
-                }
-            }
-            
-        }
+        let content = UNMutableNotificationContent()
+        content.title = "This is title"
+        content.subtitle = "This is subtitle"
+        content.body = "This is body. looloolalaa~"
+        content.badge = 0
         
-        urlTask.resume()
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 4, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "myRequestId", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request)
     }
 }
