@@ -6,30 +6,23 @@
 //
 
 import UIKit
-import UserNotifications
 
 class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) {
-            (didAllow, Error) in
-            
-            print(didAllow)
-        }
+        let myView = MyView()
+        myView.data = .init(labelStr: "Hello World!", buttonStr: "click")
+        
+        self.view.addSubview(myView)
+        
+        myView.translatesAutoresizingMaskIntoConstraints = false
+        myView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 100).isActive = true
+        myView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -150).isActive = true
+        myView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -200).isActive = true
+        myView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        
+        
     }
     
-    @IBAction func buttonAction() {
-        let content = UNMutableNotificationContent()
-        content.title = "This is title"
-        content.subtitle = "This is subtitle"
-        content.body = "This is body. looloolalaa~"
-        content.badge = 0
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 4, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "myRequestId", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request)
-    }
 }
