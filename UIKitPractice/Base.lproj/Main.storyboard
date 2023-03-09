@@ -16,18 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-hj-KLi" customClass="MyView" customModule="UIKitPractice" customModuleProvider="target">
-                                <rect key="frame" x="76" y="155" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-oF-otG">
+                                <rect key="frame" x="33.999999999999986" y="151" width="239.66666666666663" height="97.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hellohelloheohefohkohellohelloheohefohkohellohelloheohefohkohellohelloheohefohkohellohelloheohefohko" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4b-kw-ifk">
+                                        <rect key="frame" x="8" y="8" width="223.66666666666666" height="81.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="I4b-kw-ifk" firstAttribute="top" secondItem="HbW-oF-otG" secondAttribute="top" constant="8" id="45s-e7-zsw"/>
+                                    <constraint firstAttribute="bottom" secondItem="I4b-kw-ifk" secondAttribute="bottom" constant="8" id="Jyi-XH-0ip"/>
+                                    <constraint firstItem="I4b-kw-ifk" firstAttribute="leading" secondItem="HbW-oF-otG" secondAttribute="leading" constant="8" id="cZC-CQ-DdK"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="dIr-N7-bhx"/>
+                                    <constraint firstAttribute="trailing" secondItem="I4b-kw-ifk" secondAttribute="trailing" constant="8" id="jw9-5Z-REf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7fc-Im-4jS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tj3-hj-KLi" firstAttribute="top" secondItem="7fc-Im-4jS" secondAttribute="top" constant="96" id="GAT-HV-MbX"/>
-                            <constraint firstItem="7fc-Im-4jS" firstAttribute="bottom" secondItem="Tj3-hj-KLi" secondAttribute="bottom" constant="535" id="IB6-tb-CR4"/>
-                            <constraint firstItem="Tj3-hj-KLi" firstAttribute="leading" secondItem="7fc-Im-4jS" secondAttribute="leading" constant="76" id="bDt-5n-EQj"/>
-                            <constraint firstItem="7fc-Im-4jS" firstAttribute="trailing" secondItem="Tj3-hj-KLi" secondAttribute="trailing" constant="77" id="nBv-Pk-JC2"/>
+                            <constraint firstItem="HbW-oF-otG" firstAttribute="leading" secondItem="7fc-Im-4jS" secondAttribute="leading" constant="34" id="0ww-6R-Tap"/>
+                            <constraint firstItem="HbW-oF-otG" firstAttribute="top" secondItem="7fc-Im-4jS" secondAttribute="top" constant="92" id="PVk-yk-Dni"/>
+                            <constraint firstItem="7fc-Im-4jS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HbW-oF-otG" secondAttribute="trailing" constant="119" id="cxU-mz-2sw"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,6 +53,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
