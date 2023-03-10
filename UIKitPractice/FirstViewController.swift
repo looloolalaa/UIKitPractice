@@ -9,32 +9,51 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet weak var phoneNumberLabel: UILabel!
-    var phoneNumber: String = "" {
-        didSet {
-            self.phoneNumberLabel.textColor = .black
-            self.phoneNumberLabel.text = phoneNumber
-        }
-    }
+    @IBOutlet weak var tableView: UITableView!
     
-    
-    @IBOutlet var numberPads: [CircleButton]!
+    let texts = [
+        "asd",
+        "123123fansjfnajskfn",
+        "my name is ..",
+        "sadklamsdlansfjsdnfjsf\nasdasdjnasdjln",
+        "sadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtextsadklamsdlansfjsdnfjsfasdasdjnasdjlnverylongtext",
+        "0",
+        "1",
+        "2",
+        "4444",
+        "4444",
+        "7777"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        for btn in numberPads {
-            btn.addTarget(self, action: #selector(onClick), for: .touchUpInside)
-        }
+        let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
+        self.tableView.register(cellNib, forCellReuseIdentifier: "tableViewCell")
+        
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 20
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
+}
+
+extension FirstViewController: UITableViewDelegate {
     
-    @objc func onClick(_ sender: UIButton) {
-        guard let str = sender.titleLabel?.text else { return }
-        phoneNumber += str
+}
+
+extension FirstViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.texts.count
     }
-    
-    @IBAction func call() {
-        phoneNumber = ""
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
+        cell.contentLabel.text = self.texts[indexPath.row]
+        cell.userProfileImage.image = UIImage(named: indexPath.row % 2 == 0 ? "꿀벌" : "아기사슴")
+        return cell
     }
-    
+
+
 }
