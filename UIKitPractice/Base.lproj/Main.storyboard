@@ -16,46 +16,372 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-oF-otG">
-                                <rect key="frame" x="33.999999999999986" y="151" width="239.66666666666663" height="97.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="010-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="moj-X1-dav">
+                                <rect key="frame" x="51.666666666666657" y="130.33333333333334" width="290" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0sv-h9-0lV">
+                                <rect key="frame" x="71.666666666666686" y="211" width="250" height="430"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hellohelloheohefohkohellohelloheohefohkohellohelloheohefohkohellohelloheohefohkohellohelloheohefohko" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4b-kw-ifk">
-                                        <rect key="frame" x="8" y="8" width="223.66666666666666" height="81.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="og7-86-c50">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTG-dO-6rZ" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="RSO-hQ-0wS"/>
+                                                    <constraint firstAttribute="height" constant="70" id="qSU-nn-QKW"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-JS-6Ki" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="89.999999999999986" y="0.0" width="70.000000000000014" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="N2C-ui-ahb"/>
+                                                    <constraint firstAttribute="width" constant="70" id="uL9-7I-C8r"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGi-9K-ZkJ" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="I1Q-37-3Tf"/>
+                                                    <constraint firstAttribute="height" constant="70" id="nze-OH-W4u"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x24-Ra-G66">
+                                        <rect key="frame" x="0.0" y="90" width="250" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E8-gn-l8t" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Qks-hs-tO1"/>
+                                                    <constraint firstAttribute="width" constant="70" id="jBi-wR-NpR"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCo-Rv-caZ" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="89.999999999999986" y="0.0" width="70.000000000000014" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="bD7-wc-itp"/>
+                                                    <constraint firstAttribute="height" constant="70" id="czm-s0-bpE"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-uA-OnE" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Ebu-hE-gyG"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Rir-ZN-Pc6"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-e0-Ffu">
+                                        <rect key="frame" x="0.0" y="180" width="250" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaO-8T-E2J" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="0xd-Y7-g2q"/>
+                                                    <constraint firstAttribute="height" constant="70" id="gWM-L8-zGc"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="711-Kv-kra" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="89.999999999999986" y="0.0" width="70.000000000000014" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="QMC-7q-QL4"/>
+                                                    <constraint firstAttribute="width" constant="70" id="gpG-kf-7Dp"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzT-F5-EOf" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="qll-pc-PTW"/>
+                                                    <constraint firstAttribute="width" constant="70" id="wLw-eB-Aq7"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-zh-QqP">
+                                        <rect key="frame" x="0.0" y="270" width="250" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qav-uS-NZu" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="OJy-7c-sfT"/>
+                                                    <constraint firstAttribute="height" constant="70" id="PKX-Sm-IVK"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="✻">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74q-ZC-jX0" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="89.999999999999986" y="0.0" width="70.000000000000014" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="8L8-vH-k0W"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Kak-GG-In2"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifj-Xb-fop" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="180" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="CAK-od-82C"/>
+                                                    <constraint firstAttribute="height" constant="70" id="ZQ5-G3-tao"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="#">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yw9-6D-NgX">
+                                        <rect key="frame" x="0.0" y="360" width="250" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-Lf-NdU">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZm-L7-YZp" customClass="CircleButton" customModule="UIKitPractice" customModuleProvider="target">
+                                                <rect key="frame" x="89.999999999999986" y="0.0" width="70.000000000000014" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="LaI-gJ-2yy"/>
+                                                    <constraint firstAttribute="height" constant="70" id="NMd-Sa-yQe"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="phone.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="35"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="call" destination="Qk8-iN-wQu" eventType="touchUpInside" id="4z2-Gz-iJ1"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3di-CX-RrE">
+                                                <rect key="frame" x="180" y="0.0" width="70" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <constraints>
-                                    <constraint firstItem="I4b-kw-ifk" firstAttribute="top" secondItem="HbW-oF-otG" secondAttribute="top" constant="8" id="45s-e7-zsw"/>
-                                    <constraint firstAttribute="bottom" secondItem="I4b-kw-ifk" secondAttribute="bottom" constant="8" id="Jyi-XH-0ip"/>
-                                    <constraint firstItem="I4b-kw-ifk" firstAttribute="leading" secondItem="HbW-oF-otG" secondAttribute="leading" constant="8" id="cZC-CQ-DdK"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="dIr-N7-bhx"/>
-                                    <constraint firstAttribute="trailing" secondItem="I4b-kw-ifk" secondAttribute="trailing" constant="8" id="jw9-5Z-REf"/>
-                                </constraints>
-                            </view>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7fc-Im-4jS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HbW-oF-otG" firstAttribute="leading" secondItem="7fc-Im-4jS" secondAttribute="leading" constant="34" id="0ww-6R-Tap"/>
-                            <constraint firstItem="HbW-oF-otG" firstAttribute="top" secondItem="7fc-Im-4jS" secondAttribute="top" constant="92" id="PVk-yk-Dni"/>
-                            <constraint firstItem="7fc-Im-4jS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HbW-oF-otG" secondAttribute="trailing" constant="119" id="cxU-mz-2sw"/>
+                            <constraint firstItem="moj-X1-dav" firstAttribute="centerX" secondItem="n7H-R8-jgE" secondAttribute="centerX" id="7ge-6L-rIf"/>
+                            <constraint firstItem="0sv-h9-0lV" firstAttribute="top" secondItem="moj-X1-dav" secondAttribute="bottom" constant="40" id="89M-4U-ARZ"/>
+                            <constraint firstItem="moj-X1-dav" firstAttribute="leading" secondItem="0sv-h9-0lV" secondAttribute="leading" constant="-20" id="FHH-S4-T1R"/>
+                            <constraint firstItem="0sv-h9-0lV" firstAttribute="centerX" secondItem="n7H-R8-jgE" secondAttribute="centerX" id="Xxh-Gi-1lh"/>
+                            <constraint firstItem="0sv-h9-0lV" firstAttribute="centerY" secondItem="n7H-R8-jgE" secondAttribute="centerY" id="jal-SK-Rqa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="phoneNumberLabel" destination="moj-X1-dav" id="U7d-Jk-fKc"/>
+                        <outletCollection property="numberPads" destination="JaO-8T-E2J" collectionClass="NSMutableArray" id="NsM-4R-woZ"/>
+                        <outletCollection property="numberPads" destination="LzT-F5-EOf" collectionClass="NSMutableArray" id="ovX-wl-98C"/>
+                        <outletCollection property="numberPads" destination="QGi-9K-ZkJ" collectionClass="NSMutableArray" id="7u6-w4-SOy"/>
+                        <outletCollection property="numberPads" destination="qav-uS-NZu" collectionClass="NSMutableArray" id="lem-7h-fc3"/>
+                        <outletCollection property="numberPads" destination="74q-ZC-jX0" collectionClass="NSMutableArray" id="RcU-Lx-iHT"/>
+                        <outletCollection property="numberPads" destination="oCo-Rv-caZ" collectionClass="NSMutableArray" id="Tga-8j-nJP"/>
+                        <outletCollection property="numberPads" destination="4E8-gn-l8t" collectionClass="NSMutableArray" id="1sU-Ro-aXO"/>
+                        <outletCollection property="numberPads" destination="pTG-dO-6rZ" collectionClass="NSMutableArray" id="RIp-cu-UFE"/>
+                        <outletCollection property="numberPads" destination="Ifj-Xb-fop" collectionClass="NSMutableArray" id="KPt-Mc-mOi"/>
+                        <outletCollection property="numberPads" destination="YNO-uA-OnE" collectionClass="NSMutableArray" id="zA1-Uq-KgH"/>
+                        <outletCollection property="numberPads" destination="Xtd-JS-6Ki" collectionClass="NSMutableArray" id="Kpm-DP-H6c"/>
+                        <outletCollection property="numberPads" destination="711-Kv-kra" collectionClass="NSMutableArray" id="15Q-MV-a65"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFs-14-8bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1759.5419847328244" y="-112.67605633802818"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="4E8-gn-l8t">
+            <size key="intrinsicContentSize" width="37.666666666666664" height="40.333333333333336"/>
+        </designable>
+        <designable name="711-Kv-kra">
+            <size key="intrinsicContentSize" width="37.666666666666664" height="40.333333333333336"/>
+        </designable>
+        <designable name="74q-ZC-jX0">
+            <size key="intrinsicContentSize" width="37.333333333333336" height="40.333333333333336"/>
+        </designable>
+        <designable name="Ifj-Xb-fop">
+            <size key="intrinsicContentSize" width="37.333333333333336" height="40.333333333333336"/>
+        </designable>
+        <designable name="JaO-8T-E2J">
+            <size key="intrinsicContentSize" width="36.333333333333336" height="40.333333333333336"/>
+        </designable>
+        <designable name="LzT-F5-EOf">
+            <size key="intrinsicContentSize" width="37.666666666666664" height="40.333333333333336"/>
+        </designable>
+        <designable name="QGi-9K-ZkJ">
+            <size key="intrinsicContentSize" width="37.333333333333336" height="40.333333333333336"/>
+        </designable>
+        <designable name="Xtd-JS-6Ki">
+            <size key="intrinsicContentSize" width="36.666666666666664" height="40.333333333333336"/>
+        </designable>
+        <designable name="YNO-uA-OnE">
+            <size key="intrinsicContentSize" width="37.666666666666664" height="40.333333333333336"/>
+        </designable>
+        <designable name="bZm-L7-YZp">
+            <size key="intrinsicContentSize" width="60.333333333333336" height="43.666666666666664"/>
+        </designable>
+        <designable name="oCo-Rv-caZ">
+            <size key="intrinsicContentSize" width="37" height="40.333333333333336"/>
+        </designable>
+        <designable name="pTG-dO-6rZ">
+            <size key="intrinsicContentSize" width="34" height="40.333333333333336"/>
+        </designable>
+        <designable name="qav-uS-NZu">
+            <size key="intrinsicContentSize" width="39.666666666666664" height="40.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
