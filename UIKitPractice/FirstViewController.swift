@@ -9,40 +9,64 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    var uiView: UIView = {
-        let uiView = UIView()
-        uiView.translatesAutoresizingMaskIntoConstraints = false
-        uiView.backgroundColor = .systemPurple
-        uiView.layer.cornerRadius = 20
-        return uiView
+    var ballBottomConstraint: NSLayoutConstraint?
+    var amount = -50
+    
+    var ball: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .green
+        view.layer.cornerRadius = 20
+        return view
     }()
     
-    var circleView: CircleView = {
-        let circleView = CircleView()
-        circleView.translatesAutoresizingMaskIntoConstraints = false
-        circleView.backgroundColor = .systemPink
-        return circleView
+    var myButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("move", for: .normal)
+        btn.backgroundColor = .purple
+        btn.tintColor = .white
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        btn.layer.cornerRadius = 8
+        return btn
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(uiView)
-        NSLayoutConstraint.activate([
-            uiView.widthAnchor.constraint(equalToConstant: 100),
-            uiView.heightAnchor.constraint(equalToConstant: 100),
-            uiView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            uiView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100)
-        ])
+        self.view.addSubview(myButton)
+        myButton.addTarget(self, action: #selector(bounce), for: .touchUpInside)
         
-        self.view.addSubview(circleView)
-        circleView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
-        circleView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        circleView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        circleView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        myButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
+        myButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -40).isActive = true
+        myButton.leadingAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 40).isActive = true
+        
+        self.view.addSubview(ball)
+        ball.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        ball.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        ball.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        ballBottomConstraint = ball.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        ballBottomConstraint?.isActive = true
+    }
+    
+    @objc func bounce() {
+        if -(ballBottomConstraint?.constant)! > self.view.safeAreaLayoutGuide.layoutFrame.height || (ballBottomConstraint?.constant)! > 0 {
+            amount *= -1
+        }
+        
+        ballBottomConstraint?.constant += CGFloat(amount)
+        
+        UIViewPropertyAnimator(duration: 0.2, curve: .linear, animations: {
+            self.view.layoutIfNeeded()
+        }).startAnimation()
         
     }
+    
 }
+
+
+
 
 
 #if DEBUG

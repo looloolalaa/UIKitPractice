@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		204D885129BC16BE00094142 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204D885029BC16BE00094142 /* CircleView.swift */; };
 		207CAB3F29684A4700F718CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CAB3E29684A4700F718CA /* AppDelegate.swift */; };
 		207CAB4129684A4700F718CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CAB4029684A4700F718CA /* SceneDelegate.swift */; };
 		207CAB4329684A4700F718CA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CAB4229684A4700F718CA /* FirstViewController.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		204D885029BC16BE00094142 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		207CAB3B29684A4700F718CA /* UIKitPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207CAB3E29684A4700F718CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207CAB4029684A4700F718CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				207CAB3E29684A4700F718CA /* AppDelegate.swift */,
 				207CAB4029684A4700F718CA /* SceneDelegate.swift */,
 				207CAB4229684A4700F718CA /* FirstViewController.swift */,
-				204D885029BC16BE00094142 /* CircleView.swift */,
 				207CAB4429684A4700F718CA /* Main.storyboard */,
 				207CAB4729684A4900F718CA /* Assets.xcassets */,
 				207CAB4929684A4900F718CA /* LaunchScreen.storyboard */,
@@ -141,7 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				204D885129BC16BE00094142 /* CircleView.swift in Sources */,
 				207CAB4329684A4700F718CA /* FirstViewController.swift in Sources */,
 				207CAB3F29684A4700F718CA /* AppDelegate.swift in Sources */,
 				207CAB4129684A4700F718CA /* SceneDelegate.swift in Sources */,
