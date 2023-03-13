@@ -13,6 +13,7 @@
 		207CAB4629684A4700F718CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207CAB4429684A4700F718CA /* Main.storyboard */; };
 		207CAB4829684A4900F718CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207CAB4729684A4900F718CA /* Assets.xcassets */; };
 		207CAB4B29684A4900F718CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207CAB4929684A4900F718CA /* LaunchScreen.storyboard */; };
+		208A098D29BEF83F002B4EE7 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A098C29BEF83F002B4EE7 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		207CAB4729684A4900F718CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207CAB4A29684A4900F718CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		207CAB4C29684A4900F718CA /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		208A098C29BEF83F002B4EE7 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				207CAB3E29684A4700F718CA /* AppDelegate.swift */,
 				207CAB4029684A4700F718CA /* SceneDelegate.swift */,
-				207CAB4229684A4700F718CA /* FirstViewController.swift */,
 				207CAB4429684A4700F718CA /* Main.storyboard */,
+				207CAB4229684A4700F718CA /* FirstViewController.swift */,
+				208A098C29BEF83F002B4EE7 /* MyCollectionViewCell.swift */,
 				207CAB4729684A4900F718CA /* Assets.xcassets */,
 				207CAB4929684A4900F718CA /* LaunchScreen.storyboard */,
 				207CAB4C29684A4900F718CA /* info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				207CAB4329684A4700F718CA /* FirstViewController.swift in Sources */,
 				207CAB3F29684A4700F718CA /* AppDelegate.swift in Sources */,
+				208A098D29BEF83F002B4EE7 /* MyCollectionViewCell.swift in Sources */,
 				207CAB4129684A4700F718CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
