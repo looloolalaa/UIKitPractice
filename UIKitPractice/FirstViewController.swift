@@ -85,7 +85,8 @@ class FirstViewController: UIViewController {
                 self.datas.removeFirst()
             }
         case resetButton:
-            self.datas = []
+//            self.datas = []
+            self.datas[0] = Feed(imageName: "pencil")
         case plusButton:
             self.datas.append(Feed(imageName: "pencil"))
         default:
