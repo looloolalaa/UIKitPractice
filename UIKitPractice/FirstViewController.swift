@@ -11,7 +11,12 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
-    let datas = [
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    
+    
+    var datas = [
         "moon", "zzz", "sparkles", "cloud", "tornado", "smoke.fill", "tv.fill", "gamecontroller", "headphones", "flame", "bolt.fill", "hare", "tortoise", "moon", "zzz", "sparkles", "cloud", "tornado", "smoke.fill", "tv.fill", "gamecontroller", "headphones", "flame", "bolt.fill", "hare", "tortoise", "ant", "hare", "car", "airplane", "heart", "bandage", "waveform.path.ecg", "staroflife", "bed.double.fill", "signature", "bag", "cart", "creditcard", "clock", "alarm", "stopwatch.fill", "timer"
     ]
     
@@ -27,6 +32,21 @@ class FirstViewController: UIViewController {
         
     }
     
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        switch sender {
+        case minusButton:
+            if !self.datas.isEmpty {
+                self.datas.removeFirst()
+            }
+        case resetButton:
+            self.datas = []
+        case plusButton:
+            self.datas.append("pencil")
+        default:
+            break
+        }
+        self.myCollectionView.reloadData()
+    }
 }
 
 extension FirstViewController {
@@ -39,11 +59,8 @@ extension FirstViewController {
 
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .absolute(150))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 3)
-//            group.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
             
             let section = NSCollectionLayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .continuous
-//            section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
             return section
         }
         
