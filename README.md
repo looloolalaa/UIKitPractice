@@ -1,11 +1,8 @@
 # UIKit Practice
 
-- [first topic]()
+- data exchanging between view controllers
+    - [segue + prepare](https://github.com/looloolalaa/UIKitPractice/blob/ac095e47453ca129e88972e363bdddca9176acfc/UIKitPractice/FirstViewController.swift)
+    - [temp]()
+
 - [tableView]()
 - [CollectionView]()
-
-<!---->
-<!--<img src="screenshots/0.png" width="50%">-->
-<!--<img src="screenshots/1.png" width="50%">-->
-<!--<img src="screenshots/2.png" width="50%">-->
-<!--<img src="screenshots/3.png" width="50%">-->
