@@ -8,4 +8,8 @@
     - [closure](https://github.com/looloolalaa/UIKitPractice/blob/9321a7500f99a92a7a5f7de7cde4c641e2a5445e/UIKitPractice/FirstViewController.swift)
     - [NotificationCenter](https://github.com/looloolalaa/UIKitPractice/blob/87e42018ab43aca39d8a057d35f728e595a2895e/UIKitPractice/FirstViewController.swift)
 - [URLSession](https://github.com/looloolalaa/UIKitPractice/blob/6c8c49be70ed894edd7a92ace97f2ca3c8ba5f71/UIKitPractice/FirstViewController.swift)
-- [UserN]()
+- [UserNotification](https://github.com/looloolalaa/UIKitPractice/blob/eb77f83fa58b96ed0857ca87b755e305a2d92c1c/UIKitPractice/FirstViewController.swift)
+- [CustomView (xib + code)](https://github.com/looloolalaa/UIKitPractice/blob/e30722b2b00c8fa1c4fc6de8e1c8f80b5fb6a34f/UIKitPractice/MyView.swift)
+- [label in uiview (contentSize)](https://github.com/looloolalaa/UIKitPractice/blob/6e121967d4c3c873b0971d347e4e5e09ae962988/UIKitPractice/Base.lproj/Main.storyboard)
+
+
