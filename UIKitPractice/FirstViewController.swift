@@ -22,7 +22,6 @@ class FirstViewController: UIViewController {
         label.text = "asd"
         self.view.addSubview(label)
         
-//        print(textView.bottomAnchor)
     }
 }
 
