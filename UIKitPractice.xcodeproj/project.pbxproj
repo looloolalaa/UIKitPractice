@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		204911422AB9C4E0008DEDF3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204911412AB9C4E0008DEDF3 /* TableViewCell.swift */; };
 		207CAB3F29684A4700F718CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CAB3E29684A4700F718CA /* AppDelegate.swift */; };
 		207CAB4129684A4700F718CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CAB4029684A4700F718CA /* SceneDelegate.swift */; };
 		207CAB4329684A4700F718CA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207CAB4229684A4700F718CA /* FirstViewController.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		204911412AB9C4E0008DEDF3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		207CAB3B29684A4700F718CA /* UIKitPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207CAB3E29684A4700F718CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207CAB4029684A4700F718CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +24,7 @@
 		207CAB4729684A4900F718CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207CAB4A29684A4900F718CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		207CAB4C29684A4900F718CA /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		208B25F62AFBB23400B017BE /* UIKitPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKitPractice.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +57,11 @@
 		207CAB3D29684A4700F718CA /* UIKitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				208B25F62AFBB23400B017BE /* UIKitPractice.entitlements */,
 				207CAB3E29684A4700F718CA /* AppDelegate.swift */,
 				207CAB4029684A4700F718CA /* SceneDelegate.swift */,
 				207CAB4429684A4700F718CA /* Main.storyboard */,
 				207CAB4229684A4700F718CA /* FirstViewController.swift */,
-				204911412AB9C4E0008DEDF3 /* TableViewCell.swift */,
 				207CAB4729684A4900F718CA /* Assets.xcassets */,
 				207CAB4929684A4900F718CA /* LaunchScreen.storyboard */,
 				207CAB4C29684A4900F718CA /* info.plist */,
@@ -98,7 +97,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					207CAB3A29684A4700F718CA = {
 						CreatedOnToolsVersion = 14.1;
@@ -141,7 +140,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				204911422AB9C4E0008DEDF3 /* TableViewCell.swift in Sources */,
 				207CAB4329684A4700F718CA /* FirstViewController.swift in Sources */,
 				207CAB3F29684A4700F718CA /* AppDelegate.swift in Sources */,
 				207CAB4129684A4700F718CA /* SceneDelegate.swift in Sources */,
@@ -206,6 +204,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,6 +265,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -289,9 +289,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UIKitPractice/UIKitPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N347DG8BMP;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -304,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wezen.UIKitPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.codesquad.boostcamp8.iOS2-loginTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,9 +318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UIKitPractice/UIKitPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N347DG8BMP;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wezen.UIKitPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.codesquad.boostcamp8.iOS2-loginTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
