@@ -6,108 +6,52 @@
 //
 
 import UIKit
-import AuthenticationServices
 
 class FirstViewController: UIViewController {
     
-    // MARK: - Properties
-    let authorizationAppleIDButton = ASAuthorizationAppleIDButton()
+    let labelOne: UILabel = {
+      let label = UILabel()
+      label.text = "Scroll Top"
+      label.backgroundColor = .red
+      label.translatesAutoresizingMaskIntoConstraints = false
+      return label
+    }()
 
+    let labelTwo: UILabel = {
+      let label = UILabel()
+      label.text = "Scroll Bottom"
+      label.backgroundColor = .red
+      label.translatesAutoresizingMaskIntoConstraints = false
+      return label
+    }()
+
+    let scrollView: UIScrollView = {
+      let scrollView = UIScrollView()
+      scrollView.backgroundColor = .blue
+      scrollView.translatesAutoresizingMaskIntoConstraints = false
+      return scrollView
+    }()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        configureUI()
-    }
+      super.viewDidLoad()
 
-    // MARK: - UI
-    private func configureUI() {
-        setAdditionalPropertyAttributes()
-        setConstraints()
-    }
+      self.view.backgroundColor = .yellow
+      self.view.addSubview(scrollView)
 
-    private func setAdditionalPropertyAttributes() {
-        authorizationAppleIDButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButton(_:)), for: .touchUpInside)
-    }
+      scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+      scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+      scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+      scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
 
-    private func setConstraints() {
-        view.addSubview(authorizationAppleIDButton)
-        authorizationAppleIDButton.translatesAutoresizingMaskIntoConstraints = false
+      scrollView.addSubview(labelOne)
 
-        NSLayoutConstraint.activate([
-            authorizationAppleIDButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            authorizationAppleIDButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-    }
+      labelOne.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 40).isActive = true
+      labelOne.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 40).isActive = true
 
-    // MARK: - Selectors
-    @objc private func handleAuthorizationAppleIDButton(_ sender: ASAuthorizationAppleIDButton) {
-        let provider = ASAuthorizationAppleIDProvider()
-        let request = provider.createRequest()
-//        request.requestedScopes = [.fullName, .email]
-        let controller = ASAuthorizationController(authorizationRequests: [request])
-        
-        controller.delegate = self
-        controller.presentationContextProvider = self
-        
-        controller.performRequests()
-    }
+      scrollView.addSubview(labelTwo)
 
-}
-
-extension FirstViewController: ASAuthorizationControllerDelegate {
-
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            // Create an account in your system.
-            
-            let userIdentifier = appleIDCredential.user
-            let userFirstName = appleIDCredential.fullName?.givenName
-            let userLastName = appleIDCredential.fullName?.familyName
-            let userEmail = appleIDCredential.email
-            print("!apple response!")
-            if let asd = appleIDCredential.identityToken {
-                print("identityToken: ", String(data: asd, encoding: .utf8 ))
-            }
-            if let zzz = appleIDCredential.authorizationCode {
-                print("authorizationCode: ", String(data: zzz, encoding: .utf8 ))
-            }
-            
-//            print(userIdentifier)
-            print(userFirstName)
-            print(userLastName)
-            print(userEmail)
-            
-            let appleIDProvider = ASAuthorizationAppleIDProvider()
-            appleIDProvider.getCredentialState(forUserID: userIdentifier) { (credentialState, error) in
-                switch credentialState {
-                case .authorized:
-                    // The Apple ID credential is valid. Show Home UI Here
-                    print("authorized")
-                    break
-                case .revoked:
-                    // The Apple ID credential is revoked. Show SignIn UI Here.
-                    print("rovoked")
-                    break
-                case .notFound:
-                    // No credential was found. Show SignIn UI Here.
-                    print("notFound")
-                    break
-                default:
-                    print("default")
-                    break
-                }
-            }
-        }
-    }
-
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print(error)
-    }
-}
-
-
-extension FirstViewController: ASAuthorizationControllerPresentationContextProviding {
-
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return view.window!
+      labelTwo.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 40).isActive = true
+      labelTwo.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 1000).isActive = true
+      labelTwo.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -10).isActive = true
     }
 }
